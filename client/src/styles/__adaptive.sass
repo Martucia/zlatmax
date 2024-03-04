@@ -1,0 +1,496 @@
+@media only screen and (max-width: 1400px)
+    .product-info
+        gap: 30px
+
+@media only screen and (max-width: 1300px)
+    .product-info
+        width: 95%
+        // gap: 30px
+    .product-swiper
+        width: 95%
+        margin: 60px auto 120px
+    .shelf__wrapper
+        grid-template-columns: 1fr 1fr 1fr
+
+    .admin-catalog-product
+        // flex-direction: column
+        height: auto
+        gap: 30px
+        padding: 30px 40px
+        position: relative
+        &__left
+            width: 100%
+        &__right
+            width: 100%
+            justify-content: flex-end
+        &__reviews
+            a
+                margin: 0
+                margin-right: 50px
+
+        // &__price
+        //     position: absolute
+        //     right: 40px
+        //     top: 34px
+    .catalog
+        &__inner
+            grid-template-columns: 1fr
+@media only screen and (max-width: 1200px)
+    .header
+        &__center
+            &__inner
+                grid-template-columns: 3fr 4fr
+                .search
+                    width: 76%
+                .city
+                    font-size: 17px
+                .order-block
+                    a
+                        font-size: 15px
+    .types
+        grid-template-columns: 1fr 1fr
+    .product
+        &__rate, &__info
+            line-height: 28px
+            flex-direction: column
+            align-items: baseline
+    .product-info
+        .information
+            .interaction
+                .btns
+                    display: grid
+                    width: 100%
+                    grid-template-columns: 1fr 1fr
+                    button
+                        padding: 0
+                        display: flex
+                        align-items: center
+                        justify-content: center
+
+@media only screen and (max-width: 1050px)
+    .banner
+        &__text
+            .desc
+                font-size: 16px
+        &__img
+            min-width: 400px
+    .product-info
+        .swiper
+            min-width: 500px
+        .information
+            .interaction
+                .btns
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    button
+                        padding: 0
+                    // .tobasket
+                    //     padding: 0 15px
+
+@media only screen and (max-width: 1000px)
+    body.noscroll
+        padding-right: 0
+    .header
+        display: none
+    .mobile-header
+        display: block
+        &__bottom
+            display: grid
+        .header__bottom
+            display: none
+    .banner
+        overflow: hidden
+        &__inner
+            position: relative
+            grid-template-areas: "text" "blocks"
+        &__img
+            position: absolute
+            right: -160px
+            top: 230px
+            transform: translate(0, -100px)
+            height: 390px
+            p
+                height: 100%
+                width: auto
+            img
+                height: 100%
+                width: auto
+        &__text
+            padding-right: 280px
+    // .product
+    //     .price
+    //         font-size: 18px
+    .shelf
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr
+            .product:last-child
+                display: none
+    .product-info
+        grid-template-columns: 1fr
+
+        .swiper
+            min-width: auto
+            display: grid
+            height: 100%
+            // max-height: 500px
+            height: 500px
+            grid-template-columns: 5fr 1fr
+            gap: 15px
+            .main-photo
+                // height: 500px
+                height: 100%
+                img
+                    height: 100%
+                    object-fit: cover
+            .photo-row
+                grid-template-columns: 1fr
+                height: 100%
+                height: 100%
+                gap: 16px
+                // grid-template-rows: min-content
+                grid-template-rows: 113px 113px 113px 113px
+                .photo
+                    height: 100%
+                img
+                    // height: 100%
+                    object-fit: cover
+                    max-height: 100%
+    .product-swiper__characteristic
+        grid-template-columns: 1fr
+        .characteristic-column
+            padding: 0
+            border-right: none
+            border-bottom: 1px solid rgba(20, 20, 20, 0.15)
+            padding: 40px 0
+            &:last-child
+                border-bottom: none
+            &:first-child
+                padding: 0 0 40px
+    .catalog
+        &__products__wrapper
+            grid-template-columns: 1fr 1fr
+            .product__img
+                height: 268px
+    .modal__content
+        &.editor
+            form
+                input.form-send
+                    margin: 0 auto
+
+@media only screen and (max-width: 800px)
+    .banner
+        &__img
+            position: static
+            transform: translate(0, 0)
+            display: none
+        &__text
+            padding: 122px 0 39px
+        &__info
+            display: grid
+            grid-template-columns: 1fr 1fr
+            .block
+                max-width: 250px
+                margin: 0 auto
+        // &__inner
+        //     grid-template-areas: "text" "img" "blocks"
+    .types
+        .block
+            padding: 30px 30px 103px
+            .line
+                margin: 15px 0 13px
+            &1
+                .block__img
+                    right: 75px
+                    bottom: -90px
+                    transform: rotate(270deg)
+            &2
+                .block__img
+                    right: auto
+                    left: -50px
+                    bottom: -70px
+                    transform: rotate(78deg)
+            &3
+                .block__img
+                    right: -30px
+                    bottom: -40px
+                    height: 200px
+                    img
+                        height: 100%
+            &4
+                .block__img
+                    right: 0
+                    bottom: -80px
+                    height: 200px
+                    img
+                        height: 100%
+            &5
+                .block__img
+                    right: -64px
+                    bottom: -66px
+                    transform: rotate(306deg)
+                    img
+                        transform: scale(0.8)
+            &6
+                .block__img
+                    right: -50px
+                    bottom: -105px
+                    transform: scale(0.7)
+    .footer
+        &__row
+            grid-template-columns: 1fr 1fr
+            row-gap: 70px
+            &:last-child
+                flex-direction: column
+    .catalog
+        &__products__wrapper
+            .product
+                &__img
+                    height: 200px
+
+@media only screen and (max-width: 750px)
+    .product-swiper
+        &__header
+            gap: 35px
+            a
+                font-size: 18px
+
+@media only screen and (max-width: 700px)
+    .shelf
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            .product:last-child
+                display: flex
+    .product-info
+        .swiper
+            grid-template-columns: 1fr
+            height: auto
+            .main-photo
+                height: 500px
+            .photo-row
+                grid-template-rows: auto
+                grid-template-columns: 1fr 1fr 1fr 1fr
+    .product-swiper__reviews
+        &-row
+            position: relative
+            padding-bottom: 115px
+        .input__block
+            flex-direction: column
+            button
+                position: absolute
+                bottom: 35px
+                left: 0
+    .product-swiper__reviews-row.empty
+        flex-direction: column
+        gap: 40px
+        padding-bottom: 0
+        button
+            width: 100%
+
+@media only screen and (max-width: 650px)
+    .product-swiper
+        &__header
+            display: grid
+            grid-template-columns: 1fr 1fr
+            a
+                font-size: 18px
+                display: flex
+                align-items: center
+                justify-content: center
+
+@media only screen and (max-width: 600px)
+    .basket
+        width: 90%
+
+    .types
+        grid-template-columns: 1fr
+        margin: 0 auto 50px
+        .block
+            &3
+                .block__img
+                    height: 260px
+            &4
+                .block__img
+                    height: 270px
+            &6
+                .block__img
+                    right: -28px
+                    bottom: -51px
+                    transform: scale(1)
+    .catalog
+        &__products__wrapper
+            .product
+                &__img
+                    height: 150px
+
+@media only screen and (max-width: 550px)
+    .shelf
+        padding-bottom: 50px
+        &__header
+            a
+                display: none
+        &__mobile-btn
+            display: flex
+
+    .footer
+        &__row
+            grid-template-columns: 1fr
+            row-gap: 70px
+
+    .review__inner
+        &__header
+            flex-direction: column
+            gap: 5px
+            align-items: start
+
+    .modal__content.editor
+        padding: 80px 20px
+        form
+            input
+                &.form-send
+                    width: 100%
+                    max-width: 100%
+
+@media only screen and (max-width: 500px)
+    .banner
+        &__img
+            display: flex
+            height: auto
+            width: 100%
+            min-width: 0
+            p
+                height: auto
+                width: 100%
+                img
+                    height: auto
+                    width: 100%
+        &__inner
+            grid-template-areas: "text" "img" "blocks"
+            grid-template-columns: 1fr
+        &__text
+            width: 100%
+            padding: 40px 0 0
+            .desc
+                margin-bottom: 0
+            button
+                display: none
+            .title
+                font-size: 34px
+            // &__inner
+            //     display: flex
+            //     justify-content: center
+            //     flex-direction: column
+    .modal
+        &__content
+            width: 99%
+            padding: 72px 53px 40px
+            .close
+                right: 17px
+                top: 22px
+    .product-swiper__reviews
+        .input__block
+            button
+                width: 100%
+        .review
+            gap: 0
+            &__img
+                img
+                    width: 45px
+                    height: 45px
+    .catalog
+        &__products__wrapper
+            grid-template-columns: 1fr
+            .product
+                &__img
+                    height: 300px
+    .product-info
+        .swiper
+            .main-photo
+                height: 350px
+        .information
+            .interaction
+                .btns
+                    grid-template-columns: 1fr
+
+@media only screen and (max-width: 450px)
+    .mobile-header
+        &__bottom
+            display: flex
+            flex-direction: column-reverse
+            height: 150px
+            grid-template-columns: 1fr
+            padding-bottom: 20px
+            justify-content: space-evenly
+
+            .buttons
+                padding: 0 10px
+    .basket-order
+        max-width: 150px
+    .basket__summ
+        font-size: 22px
+    .banner
+        &__info
+            grid-template-columns: 1fr
+            margin-bottom: 50px
+            .block
+                max-width: 300px
+    .product
+        // padding: 20px 10px 170px
+        .tobasket
+            font-size: 16px
+            gap: 5px
+    .mobile-menu
+        width: 90%
+    .shelf
+        &__wrapper
+            grid-template-columns: 1fr
+    .product
+        &__info, &__rate
+            flex-direction: row
+    .product-info
+        .information
+            padding: 20px
+            &__header
+                flex-direction: column
+                gap: 15px
+                &__left
+                    width: 100%
+                    justify-content: space-between
+                &__buttons
+                    width: 100%
+                    justify-content: start
+        .interaction
+            .btns
+                flex-direction: column
+                width: 100%
+                button
+                    width: 100%
+                    justify-content: center
+        .characteristic
+            width: 100%
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 10px
+            ul
+                width: 100%
+                display: flex
+                flex-direction: column
+                gap: 15px
+                li
+                    font-size: 16px
+                    margin-bottom: 0
+    .modal__content
+        &.editor
+            form
+                .form__photos
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    gap: 10px
+                    margin-top: 30px
+                    margin-bottom: 0
+                .form__photo, .form__photo.add-new
+                    height: 160px
+                    margin-top: 10px
+                    .img
+                        height: 160px
+                        .image
+                            width: 100%

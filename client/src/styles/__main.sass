@@ -1,0 +1,1250 @@
+::-webkit-scrollbar
+    width: 5px
+
+::-webkit-scrollbar-track
+    background: transparent
+    padding: 0 2px
+
+::-webkit-scrollbar-thumb
+    background: rgba(109, 109, 109, 0.5)
+    border-radius: 8px
+    border-radius: 3px solid rgba(109, 109, 109, 0.5)
+
+body.noscroll
+    overflow: hidden
+    padding-right: 5px
+
+.banner
+    width: 100%
+    display: flex
+    justify-content: center
+    background-image: url("../images/bg2.png")
+    // background-position: 35% center
+    background-repeat: no-repeat
+    // background-attachment: fixed
+    background-size: cover
+    // background-size: 100% 100%
+    font-family: 'Montserrat', sans-serif
+    &__inner
+        display: grid
+        grid-template-areas: "text img" "blocks blocks"
+        width: 90%
+        max-width: 1600px
+        padding-top: 30px
+        gap: 50px
+    &__text
+        grid-area: text
+        color: #fff
+        // padding-top: 48px
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 60px 0 0px
+        .title
+            font-weight: 500
+            font-size: 36px
+            line-height: 46px
+            letter-spacing: 0.03em
+            margin-bottom: 30px
+            &::first-line
+                font-weight: 700
+        .desc
+            font-weight: 500
+            font-size: 20px
+            line-height: 30px
+            letter-spacing: 0.03em
+            color: rgba(255, 255, 255, 0.7)
+            margin-bottom: 60px
+            &::first-line
+                color: rgba(255, 255, 255, 1)
+        button
+            background: #E8AA31
+            box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.43)
+            border-radius: 3px
+            font-weight: 600
+            font-size: 20px
+            line-height: 46px
+            color: #FFFFFF
+            padding: 5px 50px
+    &__img
+        grid-area: img
+        display: flex
+        justify-content: center
+        align-items: center
+        min-width: 500px
+        p
+            width: 100%
+            img
+                width: 100%
+    &__info
+        grid-area: blocks
+        display: flex
+        justify-content: center
+        gap: 30px
+        padding-bottom: 60px
+        .block
+            display: flex
+            flex-direction: column
+            font-weight: 600
+            font-size: 16px
+            line-height: 32px
+            text-align: center
+            color: #FFFFFF
+            align-items: center
+            // justify-content: center
+            gap: 15px
+
+.types
+    width: 90%
+    max-width: 1600px
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 30px
+    margin: 100px auto
+    font-family: 'Montserrat', sans-serif
+    .block
+        background: #FFFFFF
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
+        padding: 30px 30px 60px
+        position: relative
+        overflow: hidden
+        a
+            width: 100%
+            height: 100%
+            color: #141414
+        &__text
+            z-index: 2
+        
+        .title
+            font-weight: 600
+            font-size: 20px
+            line-height: 34px
+            z-index: 2
+            color: #000000
+        .line
+            border: 2px solid #E8AA31
+            margin: 15px 0 30px
+            width: 68px
+            z-index: 2
+        ul
+            font-weight: 500
+            font-size: 16px
+            line-height: 34px
+            display: flex
+            flex-direction: column
+            gap: 2px
+            z-index: 2
+        &__img
+            position: absolute
+            z-index: 0
+        &1
+            .block__img
+                right: 72px
+                bottom: -20px
+        &2
+            .block__img
+                right: -20px
+                bottom: -70px
+        &3
+            .block__img
+                right: -30px
+                bottom: -40px
+        &4
+            .block__img
+                right: -20px
+                bottom: -100px
+        &5
+            .block__img
+                right: -75px
+                bottom: -40px
+        &6
+            .block__img
+                right: -50px
+                bottom: -40px
+
+.shelf
+    width: 90%
+    max-width: 1600px
+    margin: 0 auto
+    font-family: 'Montserrat', sans-serif
+    padding-bottom: 200px
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 60px
+        .title
+            font-weight: 700
+            font-size: 30px
+            line-height: 46px
+            letter-spacing: 0.05em
+            color: #141414
+        a
+            font-weight: 600
+            font-size: 18px
+            line-height: 46px
+            letter-spacing: 0.05em
+            color: rgba(20, 20, 20, 0.58)
+            display: flex
+            gap: 15px
+            align-items: center
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 20px
+    &__mobile-btn
+        display: none
+        align-items: center
+        justify-content: center
+        margin-top: 30px
+        a
+            display: flex
+            gap: 15px
+            align-items: center
+            font-weight: 600
+            font-size: 18px
+            line-height: 46px
+            letter-spacing: 0.05em
+            color: rgba(20, 20, 20, 0.58)
+
+.product
+    background: #FEFEFE
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+    padding: 20px 20px 205px
+    display: flex
+    flex-direction: column
+    line-height: 34px
+    position: relative
+    // min-width: 270px
+    width: 100%
+    &-unavailable
+        opacity: .35
+        .unavailable
+            font-size: 16px
+            height: 46px
+    .onsale
+        position: absolute
+        left: 0
+        top: 20px
+        background: #e8aa31
+        font-weight: 600
+        font-size: 18px
+        line-height: 22px
+        color: #FFFFFF
+        padding: 7px 22px
+    &__img
+        margin-bottom: 20px
+        height: 200px
+        a
+            height: 100%
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+        img
+            height: 100%
+            max-width: 90%
+            object-fit: contain
+    &__title
+        a
+            font-weight: 600
+            font-size: 20px
+            line-height: 34px
+            color: #141414
+    &__info
+        display: flex
+        align-items: center
+        justify-content: space-between
+        font-weight: 500
+        font-size: 16px
+        color: #ABABAB
+    &__rate
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        .stars
+            display: flex
+            gap: 2px
+            align-items: center
+            color: #faaf00
+        .reviews
+            a
+                font-weight: 500
+                font-size: 16px
+                color: #ABABAB
+                word-wrap: normal
+                display: block
+    &__interaction
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-top: 20px
+        margin-bottom: 25px
+        padding-top: 20px
+        border-top: 1px solid rgba(20, 20, 20, 0.5)
+        .price
+            font-weight: 600
+            font-size: 18px
+            color: #141414
+            display: flex
+            flex-direction: column
+        .buttons
+            display: flex
+            align-items: center
+            gap: 15px
+            a
+                display: flex
+                align-items: center
+    .tobasket
+        background: #E8AA31
+        box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.43)
+        border-radius: 3px
+        font-weight: 600
+        font-size: 18px
+        line-height: 46px
+        gap: 16px
+        display: flex
+        align-items: center
+        color: #FFFFFF
+        width: 100%
+        justify-content: center
+        transition: 0.2s
+        &:hover
+            box-shadow: 0px 6px 20px rgba(232, 170, 49, 0.63)
+    .product__footer
+        position: absolute
+        bottom: 30px
+        width: 100%
+        left: 0
+        padding: 0 20px
+
+.way
+    display: flex
+    align-items: center
+    gap: 15px
+    width: 100%
+    max-width: 1600px
+    margin: 30px auto
+    a
+        font-family: 'Montserrat'
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        color: #141414
+        opacity: 0.5
+        &:last-child
+            color: #E8AA31
+            opacity: 1
+
+.catalog
+    width: 90%
+    font-family: 'Montserrat'
+    margin: 0 auto 25px
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        // margin-bottom: 30px
+    &__inner
+        display: grid
+        grid-template-columns: 375px 1fr
+        // grid-template-columns: 1fr
+        gap: 30px
+        align-items: flex-start
+    &__products
+        width: 100%
+        &__wrapper
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 30px
+            width: 100%
+    &__filter
+        .title
+            font-weight: 700
+            font-size: 20px
+            line-height: 24px
+            color: #FFFFFF
+            padding: 20px 30px
+            background: #141414
+            margin-bottom: 50px
+        .drop-down
+            width: 100%
+            .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked
+                color: #E8AA31
+            .MuiFormControlLabel-label
+                font-family: 'Montserrat'
+                font-weight: 500
+                font-size: 16px
+                line-height: 20px
+                color: #141414
+            &__title
+                background: #141414
+                padding: 20px 30px
+                display: flex
+                align-items: center
+                justify-content: space-between
+                font-weight: 600
+                font-size: 20px
+                line-height: 24px
+                color: #fff
+                button
+                    display: flex
+                    align-items: center
+                    animation-duration: 1s
+                    &.close
+                        // transform: rotate(180deg)
+                        -o-animation: rotate 0.1s
+                        animation-timing-function: ease
+                        animation-delay: 0
+                        animation-name: rotate
+                        animation-iteration-count: 1
+                        animation-fill-mode: forwards
+            &__inner
+                padding: 20px 30px
+                display: flex
+                flex-direction: column
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+.pagination
+    margin-top: 40px
+    display: flex
+    justify-content: flex-end
+    margin-bottom: 100px
+    .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected
+        background: #F6B817
+
+@keyframes rotate
+    0%
+        Transform: rotate(0deg)
+    100%
+        Transform: rotate(180deg)
+
+.admin-catalog
+    width: 90%
+    margin: 30px auto 60px
+    display: flex
+    flex-direction: column
+    gap: 25px
+    font-weight: 500
+    font-family: 'Montserrat'
+    &__wrapper
+        display: flex
+        flex-direction: column
+        gap: 25px
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        a
+            color: #141414
+            display: flex
+            white-space: nowrap
+            align-items: center
+        .add-new
+            color: #E8AA31
+            font-weight: 500
+    &-product
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 10px 40px
+        line-height: 22px
+        background: #FEFEFE
+        font-weight: 500
+        height: 100px
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+        position: relative
+        white-space: nowrap
+        &__img
+            height: 100%
+            width: 100px
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                height: 100%
+                max-width: 100%
+                max-height: 100px
+        &__title
+            a
+                font-weight: 600
+                font-size: 20px
+                line-height: 34px
+                color: #141414
+        &__left
+            display: flex
+            align-items: center
+            gap: 25px
+            height: 100%
+        &__right
+            display: flex
+            align-items: center
+        &__sale
+            background: #E8AA31
+            font-weight: 600
+            font-size: 18px
+            color: #494949
+            border-radius: 3px
+            position: absolute
+            left: -3px
+            top: 7px
+            padding: 5px 12px
+            color: #fff
+        &__reviews
+            a
+                font-size: 16px
+                line-height: 34px
+                color: #ABABAB
+                margin: 0 70px
+        &__price
+            font-weight: 600
+            font-size: 18px
+            line-height: 26px
+            color: #141414
+
+        &__delete
+            margin: 0 40px 0 100px
+        button
+            height: 25px
+            img
+                height: 100%
+
+.product-info
+    width: 90%
+    max-width: 1600px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 60px
+    margin: 30px auto 0
+    font-family: 'Montserrat'
+    align-items: flex-start
+    .swiper
+        min-width: 500px
+        display: flex
+        flex-direction: column
+        gap: 15px
+        .main-photo
+            width: 100%
+            height: 500px
+            // height: 383px
+            overflow: hidden
+            display: flex
+            align-items: center
+            justify-content: center
+            img
+                width: 100%
+                max-height: 100%
+                object-fit: cover
+                height: 100%
+        .photo-row
+            display: grid
+            gap: 15px
+            width: 100%
+            height: 120px
+            // grid-template-columns: auto
+            // grid-template-columns: minmax(100px, max-content)
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            img
+                width: 100%
+                // height: auto
+                height: 100%
+                cursor: pointer
+                object-fit: cover
+
+    .information
+        background: #FEFEFE
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+        padding: 30px
+        color: #141414
+        font-weight: 500
+        width: 100%
+        &__header
+            display: flex
+            justify-content: space-between
+            // align-items: center
+            margin-bottom: 15px
+            &__left
+                display: flex
+                align-items: center
+                column-gap: 30px
+                row-gap: 15px
+                flex-wrap: wrap
+                .title
+                    font-weight: 700
+                    font-size: 24px
+                    line-height: 29px
+            &__buttons
+                display: flex
+                align-items: center
+                gap: 25px
+                height: 100%
+        .state
+            font-size: 16px
+            line-height: 20px
+            color: #24AD53
+            padding-bottom: 30px
+            width: 100%
+            margin-bottom: 30px
+            border-bottom: 1px solid rgba(20, 20, 20, 0.15)
+        .characteristic
+            display: flex
+            gap: 40px
+            font-size: 18px
+            li
+                margin-bottom: 20px
+            &-value
+                color: rgba(20, 20, 20, 0.5)
+        .price
+            width: 100%
+            padding: 30px 0
+            border-top: 1px solid rgba(20, 20, 20, 0.15)
+            font-weight: 700
+            font-size: 30px
+            line-height: 37px
+            color: #000
+        .interaction
+            display: flex
+            justify-content: space-between
+
+            .count
+                display: flex
+                align-items: center
+                margin-right: 10px
+                display: none
+                button
+                    height: 46px
+                    width: 46px
+                    font-size: 24px
+                    line-height: 29px
+                    color: #FFFFFF
+                    background: #141414
+                    &.disabled
+                        background: #b0b0b0
+                        white-space: nowrap
+                span
+                    margin: 0 22px
+            .btns
+                display: flex
+                gap: 30px
+                align-items: center
+                button
+                    border-radius: 3px
+                    font-weight: 600
+                    font-size: 18px
+                    line-height: 46px
+                    background: #141414
+                    padding: 0 45px
+                    color: #FFFFFF
+                    white-space: nowrap
+                    height: 46px
+                .tobasket
+                    background: #E8AA31
+                    box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.43)
+                    gap: 10px
+                    display: flex
+                    align-items: center
+                    transition: 0.2s
+                    white-space: nowrap
+                    &:hover
+                        box-shadow: 0px 6px 20px rgba(232, 170, 49, 0.63)
+                .disabled
+                    box-shadow: none
+                    background: #b0b0b0
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                    &:hover
+                        box-shadow: none
+
+.modal
+    height: 100vh
+    width: 100vw
+    background: rgba(19, 19, 19, 0.8)
+    position: fixed
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    display: flex
+    align-items: center
+    z-index: 101
+    font-family: 'Montserrat', sans-serif
+    overflow: hidden
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+    flex-flow: column nowrap
+    padding: 50px 0
+    &__content
+        background: #FFFFFF
+        box-shadow: 8px 16px 32px rgba(218, 218, 218, 0.2)
+        border-radius: 4px
+        padding: 72px 80px 40px
+        position: relative
+        display: flex
+        flex-direction: column
+        gap: 30px
+        &.editor
+            padding: 80px 50px
+            // max-height: 90%
+            width: 90%
+            gap: 40px
+            form
+                width: 100%
+                height: 100%
+                display: flex
+                flex-direction: column
+                gap: 30px
+                input[type=text], textarea, input[type=number]
+                    background: #FFFFFF
+                    border: 1px solid rgba(20, 20, 20, 0.5)
+                    // box-shadow: -1px 1px 19px rgb(20 20 20 / 15%)
+                    border-radius: 4px
+                    font-size: 18px
+                    padding: 6px 15px
+                    background: rgba(7, 7, 7, 0.03)
+                input[type=checkbox]
+                    width: 20px
+                    height: 20px
+                    border: 1px solid #000000
+                    border-radius: 2px
+                    &:checked
+                        background: #e8aa31
+                textarea
+                    padding-top: 15px
+                input.form-send
+                    background: #E8AA31
+                    box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.43)
+                    border-radius: 3px
+                    color: #fff
+                    font-weight: 600
+                    font-size: 18px
+                    line-height: 46px
+                    font-family: 'Montserrat'
+                    max-width: 335px
+                    padding: 0 100px
+                label
+                    font-size: 18px
+                    color: #141414
+                    font-weight: 500
+                    display: flex
+                    flex-direction: column
+                    gap: 10px
+                    &.check-label
+                        flex-direction: row
+                .error
+                    color: #7a0000
+                    font-size: 16px
+                    margin-top: 5px
+                    font-weight: 500
+                img
+                    max-height: 300px
+                .form__photos
+                    display: flex
+                    gap: 15px
+                    margin-bottom: 20px
+                    width: 100%
+                    flex-wrap: wrap
+                .form__photo
+                    max-width: 200px
+                    position: relative
+                    height: 200px
+                    margin-top: 30px
+                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+                    .delete
+                        position: absolute
+                        width: 100%
+                        height: 100%
+                        background: rgba(11, 11, 11, 0.55)
+                        left: 0
+                        top: 0
+                        display: none
+                        align-items: center
+                        justify-content: center
+                        cursor: pointer
+                        img
+                            height: 60px
+                            width: 60px
+                    &.add-new
+                        background: #fff
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        height: 200px
+                        cursor: pointer
+                        input
+                            width: 100%
+                            height: 100%
+                            color: transparent
+                            cursor: pointer
+                            opacity: 0
+                    .img
+                        height: 200px
+                        position: relative
+                        // margin-bottom: 10px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 100%
+                        &:hover
+                            .delete
+                                display: flex
+                        .image
+                            object-fit: cover
+                            // width: 100%
+                            height: 100%
+                            max-width: 100%
+                    p
+                        width: 100%
+                        button
+                            font-weight: 500
+                            font-size: 14px
+                            line-height: 17px
+                            color: rgba(207, 207, 207, 0.74)
+                            &.main
+                                color: rgba(251, 181, 0, 0.74)
+
+            .check
+                display: flex
+                align-items: center
+                gap: 10px
+                label
+                    font-size: 18px
+                    color: #141414
+                    font-weight: 500
+                input
+                    width: 20px
+                    height: 20px
+                    border: 1px solid #000000
+                    border-radius: 2px
+                    &:checked
+                        background: #e8aa31
+            .edit-button
+                display: flex
+                justify-content: flex-end
+                a, button
+                    background: #E8AA31
+                    box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.43)
+                    border-radius: 3px
+                    color: #fff
+                    font-weight: 600
+                    font-size: 18px
+                    line-height: 46px
+                    font-family: 'Montserrat'
+                    max-width: 335px
+                    padding: 0 100px
+
+    &__title
+        color: #414141
+        font-weight: 700
+        font-size: 24px
+        text-align: center
+        margin-bottom: 40px
+
+    .input__block
+        display: flex
+        flex-direction: column
+        // margin-bottom: 32px
+        label
+            font-size: 18px
+            display: block
+            color: #8f8f8fa4
+            line-height: 150%
+        .input
+            background: #FFFFFF
+            border: 1px solid rgba(20, 20, 20, 0.5)
+            // box-shadow: -1px 1px 19px rgb(20 20 20 / 15%)
+            border-radius: 4px
+            font-size: 21px
+            padding: 12px 22px
+            background: rgba(7, 7, 7, 0.03)
+        .check
+            margin-bottom: 20px
+    &__btn
+        button
+            background: #E8AA31
+            border-radius: 4px
+            padding: 16px
+            color: #fff
+            font-size: 24px
+            width: 100%
+            margin-bottom: 48px
+    &__footer
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 24px
+        .reg
+            border: 1px solid rgba(20, 20, 20, 0.5)
+            box-sizing: border-box
+            border-radius: 4px
+            padding: 8px 12px
+            color: rgba(20, 20, 20, 0.5)
+            font-size: 14px
+            transition: 0.3s
+            &:hover
+                background: #FF6633
+                border: 1px solid #FF6633
+                color: #fff
+        .log
+            padding: 8px 30px
+        .reset
+            font-size: 14px
+            color: #606060
+    .close
+        position: absolute
+        right: 8px
+        top: 8px
+
+.basket
+    position: absolute
+    // top: 137px
+    top: 0
+    right: -500px
+    background: #fff
+    height: 100%
+    // width: 20vw
+    width: 500px
+    font-family: 'Montserrat', sans-serif
+    padding-bottom: 230px
+    transition: 0.4s
+    &Anim
+        right: 0
+    &-bg
+        background: rgb(0 0 0 / 66%)
+        width: 100%
+        height: 100%
+        position: fixed
+        left: 0
+        top: 0
+        bottom: 0
+        right: 0
+        // pointer-events: none
+
+    .title
+        font-size: 30px
+        color: #000
+        text-align: center
+        padding: 30px
+        margin-top: 30px
+        position: relative
+        border-bottom: 2px solid #E8AA31
+        button
+            position: absolute
+            right: 30px
+            top: 50%
+            transform: translate(0, -50%)
+            img
+                width: 20px
+                height: 20px
+    &__inner
+        overflow-y: auto
+        height: 100%
+        padding: 0 30px 0 10px
+        .block
+            height: 150px
+            width: 100%
+            display: flex
+            align-items: center
+            padding: 20px 0
+            border-bottom: 1px solid rgba(0, 0, 0, 0.226)
+            justify-content: space-between
+            transition: 0.3s
+            position: relative
+            &__inner
+                display: flex
+                // gap: 20px
+                height: 100%
+                align-items: center
+            &:hover
+                border-bottom: 1px solid rgba(0, 0, 0, 0.425)
+            .product__count
+                height: 30px
+                position: absolute
+                left: 8px
+                top: 20px
+                width: 30px
+                border-radius: 100%
+                background: #E8AA31
+                color: #fff
+                font-size: 18px
+                display: flex
+                align-items: center
+                justify-content: center
+            &__img
+                height: 100%
+                width: 100px
+                display: flex
+                align-items: center
+                justify-content: center
+                margin-right: 20px
+                img
+                    height: 100%
+                    max-width: 100%
+                    object-fit: contain
+            &__title
+                font-size: 19px
+                font-weight: 500
+                a
+                    color: #000
+            &__text
+                display: flex
+                flex-direction: column
+                gap: 20px
+            &__price
+                font-size: 18px
+            .delete-from-basket
+                border: 2px solid #E8AA31
+                width: 40px
+                height: 40px
+                border-radius: 100%
+    &__footer
+        padding: 30px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        border-top: 2px solid #E8AA31
+        background: #fff
+    &__summ
+        font-size: 26px
+        font-weight: 700
+        white-space: nowrap
+    &-order
+        background: #E8AA31
+        box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.43)
+        border-radius: 3px
+        font-weight: 600
+        font-size: 18px
+        line-height: 46px
+        gap: 16px
+        display: flex
+        align-items: center
+        color: #FFFFFF
+        width: 100%
+        max-width: 245px
+        justify-content: center
+        transition: 0.2s
+        &:hover
+            box-shadow: 0px 6px 20px rgba(232, 170, 49, 0.63)
+
+.product-swiper
+    width: 90%
+    margin: 120px auto
+    padding: 30px
+    font-family: 'Montserrat'
+    background: #FEFEFE
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+    &__header
+        width: 100%
+        display: flex
+        border-bottom: 1px solid rgba(20, 20, 20, 0.15)
+        align-items: center
+        gap: 60px
+        a
+            font-weight: 600
+            font-size: 20px
+            line-height: 24px
+            color: rgba(20, 20, 20, 0.5)
+            transition: color 0.3s
+            padding-bottom: 20px
+            &:hover
+                border-bottom: 2px solid #E8AA31
+                // box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.3)
+                padding-bottom: 18px
+                color: #141414
+            &.active
+                border-bottom: 2px solid #E8AA31
+                padding-bottom: 18px
+                color: #141414
+    &__inner
+        padding-top: 30px
+        font-weight: 500
+        font-size: 18px
+        line-height: 27px
+        color: #141414
+    &__info
+        font-size: 16px
+        line-height: 30px
+    &__characteristic
+        display: grid
+        justify-content: space-between
+        grid-template-columns: 1fr 1fr 1fr
+        .characteristic-column
+            border-right: 1px solid rgba(20, 20, 20, 0.15)
+            padding: 0 30px
+            .title
+                font-weight: 700
+                font-size: 18px
+                line-height: 22px
+                margin-bottom: 30px
+            &:last-child
+                border-right: 0
+            &:first-child
+                padding-left: 0
+            ul
+                display: flex
+                flex-direction: column
+                gap: 20px
+                li
+                    display: flex
+                    width: 100%
+                    align-items: center
+                    justify-content: space-between
+                    font-weight: 500
+                    font-size: 18px
+                    line-height: 22px
+                    gap: 50px
+                    p
+                        text-align: right
+                        &:first-child
+                            text-align: left
+    &__reviews
+        &-row
+            justify-content: space-between
+            // align-items: end
+            width: 100%
+            column-gap: 50px
+            flex-direction: column
+            padding-bottom: 45px
+            margin-bottom: 45px
+            border-bottom: 1px solid rgba(20, 20, 20, 0.15)
+            &.empty
+                display: flex
+                align-items: center
+                flex-direction: row
+
+            button
+                background: #000000
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
+                border-radius: 3px
+                font-weight: 600
+                font-size: 18px
+                line-height: 46px
+                color: #FFFFFF
+                padding: 0 40px
+                height: 100%
+                max-height: 50px
+            input
+                width: 100%
+                padding: 15px
+                background: rgba(255, 255, 255, 0.05)
+                border-radius: 3px
+                border: 1px solid rgba(20, 20, 20, 0.15)
+                color: #000000
+            label
+                font-weight: 600
+            input
+                height: 100%
+            .input__block
+                display: flex
+                margin-top: 20px
+                align-items: center
+                justify-content: space-between
+                width: 100%
+                margin-bottom: 20px
+                gap: 40px
+            .rating
+                display: flex
+                align-items: center
+                gap: 20px
+                p
+                    font-size: 15px
+    &__delivery
+        gap: 30px
+        display: flex
+        .delivery__column
+            display: flex
+            // align-items: center
+            flex-direction: column
+            // justify-content: space-between
+            gap: 20px
+            position: relative
+            &:first-child
+                width: 150px
+            .label
+                font-weight: 600
+                font-size: 18px
+                line-height: 22px
+                position: absolute
+                left: 0
+                &:first-child
+                    top: 26.5px
+                    transform: translate(0, -50%)
+                &:last-child
+                    bottom: 29.5px
+                    transform: translate(0, 50%)
+            &.selecters
+                width: 300px
+                height: 100%
+                .MuiSvgIcon-root
+                    width: 50px
+                    height: 100%
+                    background: #000
+                    fill: rgba(232, 170, 49, 1)
+                    right: 0
+                    top: 0
+
+.review
+    display: grid
+    grid-template-columns: 60px 1fr
+    width: 100%
+    color: #141414
+    font-family: 'Montserrat'
+    gap: 30px
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    margin-bottom: 40px
+    &__img
+        img
+            width: 60px
+            height: 60px
+    &__inner
+        width: 100%
+        display: flex
+        flex-direction: column
+        &__header
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 10px
+            .title
+                font-weight: 600
+            .date
+                font-size: 14px
+                line-height: 17px
+                color: rgba(20, 20, 20, 0.3)
+            &__right
+                display: flex
+                align-items: center
+                gap: 15px
+                .delete
+                    height: 25px
+                    img
+                        height: 100%
+
+        &__text
+            margin-bottom: 20px
+            font-size: 14px
+            margin-top: 10px
+            button
+                color: rgba(20, 20, 20, 0.3)
+                transition: 0.3s
+                &:hover
+                    text-decoration: underline
+        &__footer
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .answer
+                color: #E8AA31
+                font-weight: 600
+
+.alert
+    position: fixed
+    left: 40px
+    bottom: 50px
+    z-index: 40

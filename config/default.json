@@ -1,0 +1,6 @@
+{
+    "port": 5000,
+    "mongoUri": "mongodb+srv://martucia:EgvPQfTzhtgnVwGG@cluster0.yxvbr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "password": "EgvPQfTzhtgnVwGG",
+    "jwtSecret": "kuprum"
+}

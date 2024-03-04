@@ -1,0 +1,358 @@
+.header
+    font-family: 'Montserrat', sans-serif
+    line-height: 22px
+    width: 100%
+    a
+        font-family: 'Montserrat', sans-serif
+    &__top
+        background: #141414
+        width: 100%
+        padding: 15px 0
+        display: flex
+        justify-content: center
+        a
+            color: #fff
+            // font-weight: 500
+            // font-size: 16px
+            line-height: 20px
+        ul
+            a
+                margin-right: 60px
+        &__right
+            display: flex
+            align-items: center
+            gap: 25px
+        &__inner
+            width: 90%
+            max-width: 1600px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            button
+                color: #fff
+                display: flex
+                align-items: center
+                gap: 6px
+
+            .account
+                display: flex
+                gap: 6px
+                align-items: center
+                img
+                    height: 22px
+    &__center
+        padding: 10px 0
+        background: #fff
+        display: flex
+        justify-content: center
+        &__inner
+            display: grid
+            grid-template-columns: 1fr 1fr
+            align-items: center
+            gap: 3%
+            justify-content: space-between
+            width: 90%
+            max-width: 1600px
+        &__left
+            display: flex
+            justify-content: space-between
+            .logo
+                img
+                    height: 65px
+            .search
+                display: flex
+                align-items: center
+                width: 60%
+                // margin-right: 100px
+                input
+                    padding: 10px 20px
+                    background: rgba(7, 7, 7, 0.03)
+                    border: 1px solid rgba(4, 4, 4, 0.5)
+                    border-radius: 3px
+                    color: rgba(0, 0, 0, 0.5)
+                    font-weight: 500
+                    font-size: 14px
+                    line-height: 17px
+                    font-family: 'Montserrat'
+                    width: 100%
+                    &:active
+                        color: #000
+        &__right
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .city
+                font-weight: 600
+                font-size: 18px
+                color: #000000
+                display: flex
+                align-items: center
+                gap: 10px
+            .order-block
+                display: flex
+                flex-direction: column
+                justify-content: center
+                a
+                    font-weight: 600
+                    font-size: 16px
+                    color: #000000
+                    &.numberText
+                        font-weight: 700
+                        font-size: 16px
+                        color: #E8AA31
+
+            .balance
+                display: flex
+                align-items: center
+                gap: 20px
+                div
+                    display: flex
+                    flex-direction: column
+                .order
+                    color: #E8AA31
+        &.admin
+            box-shadow: 0px 4px 20px rgb(0 0 0 / 10%)
+            a
+                color: #141414
+                font-weight: 500
+            .header__center__right
+                justify-content: end
+    &__bottom
+        background: #141414
+        box-shadow: 0px 4px 20px rgba(53, 53, 53, 0.18)
+        width: 100%
+        display: flex
+        justify-content: center
+        &__inner
+            width: 90%
+            max-width: 1600px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            a
+                color: #fff
+                height: 60px
+                cursor: pointer
+                align-items: center
+                transition: 0.2s
+                display: flex
+                box-sizing: border-box
+                &:hover
+                    color: #E8AA31
+                    border-bottom: 4px solid #E8AA31
+                &.active
+                    color: #E8AA31
+                    border-bottom: 4px solid #E8AA31
+
+.basket-btn
+    position: relative
+    display: block
+    // margin-right: 20px
+    p
+        position: absolute
+        right: -5px
+        top: -4px
+        border-radius: 50%
+        background: #000
+        background: #E8AA31
+        height: 20px
+        width: 20px
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 11px
+        color: #fff
+
+.mobile-header
+    width: 100%
+    font-family: 'Montserrat', sans-serif
+    display: none
+    &__top
+        display: flex
+        height: 70px
+        width: 100%
+        align-items: center
+        justify-content: space-between
+        background: #fff
+        padding: 10px 5%
+        a
+            height: 100%
+            img
+                height: 100%
+    .header__bottom
+        height: 50px
+        a, li
+            font-size: 13px
+    &__bottom
+        height: 60px
+        background: #141414
+        width: 100%
+        display: none
+        align-items: center
+        // justify-content: space-between
+        padding: 10px 5%
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+        .search
+            display: flex
+            align-items: center
+            // width: 60%
+            width: 100%
+                // margin-right: 100px
+            input
+                padding: 10px 20px
+                background: rgb(254 254 254)
+                border: 1px solid rgba(4, 4, 4, 0.5)
+                border-radius: 3px
+                color: rgba(0, 0, 0, 0.5)
+                font-weight: 500
+                font-size: 14px
+                line-height: 17px
+                font-family: 'Montserrat'
+                width: 100%
+                &:active
+                    color: #000
+        .buttons
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: space-between
+            button, a
+                display: flex
+                align-items: center
+                height: 100%
+            a
+                img
+                    height: 28px
+
+    .menu-burger__header
+        position: absolute
+        right: 50px
+        top: 35px
+        transform: translate(0, -50%)
+        width: 40px
+        height: 35px
+        // display: none
+
+    .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before
+        height: 3px
+        width: 100%
+        position: absolute
+        background: #000000
+        margin: 0 auto
+
+    .menu-burger__header span
+        top: 16px
+
+    .menu-burger__header:after, .menu-burger__header:before
+        content: ''
+
+    .menu-burger__header:after
+        bottom: 5px
+
+    .menu-burger__header:before
+        top: 5px
+
+    .menu-burger__header.open-menu
+        position: fixed
+        top: 56px
+        right: 40px
+
+    .menu-burger__header.open-menu span
+        opacity: 0
+        transition: 0.5s
+
+    .menu-burger__header.open-menu:before
+        transform: rotate(38deg)
+        top: 16px
+        transition: 0.4s
+
+    .menu-burger__header.open-menu:after
+        transform: rotate(-38deg)
+        bottom: 16px
+        transition: 0.4s
+
+.mobile-menu
+    position: absolute
+    top: 0
+    right: -400px
+    background: #141414
+    height: 100%
+    // width: 20vw
+    width: 400px
+    font-family: 'Montserrat', sans-serif
+    transition: 0.4s
+    padding: 45px 30px
+    color: #FFFFFF
+    &-anim
+        right: 0
+    &-bg
+        background: rgb(0 0 0 / 66%)
+        width: 100%
+        height: 100%
+        position: fixed
+        left: 0
+        top: 0
+        bottom: 0
+        right: 0
+        z-index: 40
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        position: relative
+        margin-bottom: 40px
+        button.mobile-menu-closer
+            width: 40px
+            height: 40px
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translate(0, -50%)
+            img
+                transform: rotate(90deg)
+                width: 100%
+                height: 100%
+        .back
+            font-weight: 500
+            font-size: 18px
+            line-height: 20px
+            align-items: center
+            gap: 10px
+            display: flex
+            color: #fff
+            img
+                height: 100%
+    &__inner
+        display: flex
+        flex-direction: column
+        gap: 30px
+        a, button
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: space-between
+            font-weight: 500
+            font-size: 18px
+            line-height: 20px
+            color: #FFFFFf
+        .all-catalog
+            border-bottom: 0.5px solid rgb(255 255 255 / 70%)
+            padding-bottom: 20px
+    &__footer
+        position: absolute
+        display: flex
+        justify-content: space-between
+        align-items: center
+        bottom: 30px
+        width: 100%
+        padding: 0 40px 0 30px
+        left: 0
+        button
+            color: #fff
+            font-size: 16px
+        a
+            display: flex
+            align-items: center
+            gap: 10px
+            font-size: 16px

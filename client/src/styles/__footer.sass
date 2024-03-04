@@ -1,0 +1,92 @@
+.footer
+    font-family: 'Montserrat', sans-serif
+    width: 100%
+    background: #141414
+    padding: 70px 0
+    font-weight: 500
+    font-size: 15px
+    line-height: 22px
+    color: rgba(255, 255, 255, 0.8)
+    a
+        font-weight: 500
+        font-size: 15px
+        line-height: 22px
+        color: rgba(255, 255, 255, 0.8)
+    &__inner
+        width: 90%
+        max-width: 1600px
+        margin: 0 auto
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        padding: 30px 0
+        gap: 30px
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+        .title
+            font-weight: 600
+            color: #FFFFFF
+            margin-bottom: 25px
+            font-size: 18px
+        ul
+            display: flex
+            flex-direction: column
+            gap: 20px
+            li
+                a
+                    display: flex
+                    gap: 10px
+                    align-items: center
+        &:last-child
+            border-bottom: 0
+    &__column
+        .warranty
+            line-height: 27px
+            a
+                color: #E8AA31
+    &__bottom
+        display: flex
+        justify-content: space-between
+        &__text
+            max-width: 700px
+            line-height: 27px
+    &__form
+        .title
+            margin-bottom: 15px
+        .description
+            margin-bottom: 25px
+        form
+            display: flex
+            flex-direction: column
+            .input
+                margin-bottom: 20px
+                width: 100%
+                position: relative
+                button
+                    width: 52px
+                    height: 100%
+                    background: #E8AA31
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 3px
+                    position: absolute
+                    right: 0
+                    top: 0
+                    fill: #fff
+                input
+                    width: 100%
+                    padding: 15px
+                    background: rgba(255, 255, 255, 0.05)
+                    border-radius: 3px
+                    border: 1px solid rgba(255, 255, 255, 0.89)
+                    color: #fff
+            .checkbox
+                display: flex
+                gap: 20px
+                input
+                    background: rgba(255, 255, 255, 0.05)
+                    border-radius: 3px
+                    border: 1px solid rgba(255, 255, 255, 0.89)
+                    // width: 16px
+                    width: 23px
+                    height: 16px
